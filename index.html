@@ -18,15 +18,22 @@
     <a-plane rotation="-90 0 0" width="24" height="24" position="0 0 0" color="#111b10" opacity="0.08"></a-plane>
 
     <!-- Buddha statue placed on the left side at a fixed distance -->
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/budha_statue.glb" position="-3.6 0 -18" scale="2.0 2.0 2.0" rotation="0 35 0"></a-entity>
-    <a-ring position="-3.6 0.02 -18" rotation="-90 0 0" radius-inner="1.0" radius-outer="1.4" color="#f8e2b6" opacity="0.38"></a-ring>
-    <a-entity position="-3.6 0.6 -18">
-      <a-light type="point" color="#ffeac4" intensity="1.2" distance="6"></a-light>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/budha_statue.glb" position="-2.8 0 -14" scale="3.0 3.0 3.0" rotation="0 25 0"></a-entity>
+    <a-ring position="-2.8 0.02 -14" rotation="-90 0 0" radius-inner="1.1" radius-outer="1.6" color="#f8e2b6" opacity="0.42"></a-ring>
+    <a-entity position="-2.8 0.8 -14">
+      <a-light type="point" color="#ffeac4" intensity="1.4" distance="7"></a-light>
     </a-entity>
 
-    <!-- Soft ambient lighting around the statue -->
+    <!-- Temple placed further back on the left side -->
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/sthupa_srilanka.glb" position="-5.8 0 -28" scale="4.4 4.4 4.4" rotation="0 20 0"></a-entity>
+    <a-ring position="-5.8 0.02 -28" rotation="-90 0 0" radius-inner="1.2" radius-outer="1.9" color="#f6e0c4" opacity="0.30"></a-ring>
+    <a-entity position="-5.8 1.0 -28">
+      <a-light type="point" color="#ffe6b3" intensity="1.0" distance="8"></a-light>
+    </a-entity>
+
+    <!-- Soft ambient lighting around the statue and temple -->
     <a-light type="ambient" color="#fff7e7" intensity="0.55"></a-light>
-    <a-light type="point" color="#ffefd5" intensity="0.9" distance="10" position="0 5 -10"></a-light>
+    <a-light type="point" color="#ffefd5" intensity="0.9" distance="12" position="0 6 -14"></a-light>
   </a-scene>
 
   <div style="position:absolute; top:10px; left:10px; color:white; background:rgba(0,0,0,0.6); padding:12px; border-radius:10px; font-family:sans-serif;">
