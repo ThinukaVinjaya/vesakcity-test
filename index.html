@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 AR Vesak City with Flying Lanterns 🌸</title>
+  
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+  <a-scene embedded arjs="sourceType: webcam;">
+    
+    <!-- Camera -->
+    <a-camera gps-camera rotation-reader></a-camera>
+
+    <!-- Ground Plane (for reference) -->
+    <a-plane rotation="-90 0 0" width="50" height="50" color="#1a3c2e" opacity="0.6"></a-plane>
+
+    <!-- === MAIN SCENE ELEMENTS === -->
+
+    <!-- Large Buddha Statue (Right side) -->
+    <a-entity 
+      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/stone_buddha_statue.glb"
+      position="8 0 -15" 
+      scale="3 3 3" 
+      rotation="0 35 0"></a-entity>
+
+    <!-- Stupa / Temple (Left side) -->
+    <a-entity 
+      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/sthupa_srilanka.glb"
+      position="-10 0 -22" 
+      scale="4.5 4.5 4.5" 
+      rotation="0 -25 0"></a-entity>
+
+    <!-- Lotus Flowers (scattered) -->
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="5 0.1 -8" scale="0.8 0.8 0.8"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-6 0.1 -10" scale="0.9 0.9 0.9"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="12 0.1 -18" scale="0.7 0.7 0.7"></a-entity>
+    <!-- Add more lotuses as needed -->
+
+    <!-- Vesak Lanterns on the path -->
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/vesak_lanterns.glb" position="0 0 -5" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/vesak_lanterns.glb" position="2 0 -8" scale="1 1 1" rotation="0 20 0"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/vesak_lanterns.glb" position="-2 0 -8" scale="1 1 1" rotation="0 -20 0"></a-entity>
+
+    <!-- ===================== FLYING LANTERNS ===================== -->
+
+    <!-- Flying Lantern 1 -->
+    <a-entity id="fly1" 
+      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_lanttern.glb"
+      position="3 2 -12" 
+      scale="0.6 0.6 0.6">
+      <a-animation attribute="position" 
+                   from="3 2 -12" 
+                   to="3 25 -18" 
+                   dur="18000" 
+                   repeat="indefinite" 
+                   easing="easeInSine"></a-animation>
+      <a-animation attribute="rotation" 
+                   from="0 0 0" 
+                   to="0 360 15" 
+                   dur="14000" 
+                   repeat="indefinite" 
+                   easing="linear"></a-animation>
+    </a-entity>
+
+    <!-- Flying Lantern 2 -->
+    <a-entity id="fly2" 
+      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_lanttern.glb"
+      position="-4 1.5 -10" 
+      scale="0.55 0.55 0.55">
+      <a-animation attribute="position" 
+                   from="-4 1.5 -10" 
+                   to="-6 28 -22" 
+                   dur="22000" 
+                   repeat="indefinite" 
+                   delay="3000"
+                   easing="easeOutQuad"></a-animation>
+      <a-animation attribute="rotation" 
+                   from="0 30 0" 
+                   to="0 390 8" 
+                   dur="16000" 
+                   repeat="indefinite" 
+                   easing="linear"></a-animation>
+    </a-entity>
+
+    <!-- Flying Lantern 3 -->
+    <a-entity id="fly3" 
+      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_lanttern.glb"
+      position="7 3 -15" 
+      scale="0.65 0.65 0.65">
+      <a-animation attribute="position" 
+                   from="7 3 -15" 
+                   to="10 30 -25" 
+                   dur="17000" 
+                   repeat="indefinite" 
+                   delay="8000"
+                   easing="easeInOutSine"></a-animation>
+    </a-entity>
+
+    <!-- Add more flying lanterns (recommended 6–10 for beauty) -->
+
+    <!-- Soft ambient lighting -->
+    <a-light type="ambient" color="#aaccff" intensity="0.7"></a-light>
+    <a-light type="point" color="#ffdd88" intensity="1.2" position="0 8 -10"></a-light>
+  </a-scene>
+
+  <div style="position:absolute; top:10px; left:10px; color:white; background:rgba(0,0,0,0.6); padding:12px; border-radius:10px; font-family:sans-serif;">
+    <h2>🌕 Vesak AR City</h2>
+    <p>Move around • Look up for flying lanterns</p>
+  </div>
+</body>
+</html>
