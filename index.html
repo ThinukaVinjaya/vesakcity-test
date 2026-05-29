@@ -14,78 +14,38 @@
     <!-- Camera -->
     <a-camera position="0 1.6 0" rotation-reader></a-camera>
 
-    <!-- Subtle floor anchor for AR placement -->
-    <a-plane rotation="-90 0 0" width="24" height="24" position="0 0 0" color="#111b10" opacity="0.12"></a-plane>
+    <!-- Real-world floor anchor -->
+    <a-plane rotation="-90 0 0" width="24" height="24" position="0 0 0" color="#111b10" opacity="0.08"></a-plane>
 
-    <!-- Lotus-lined path (small flowers on both sides) -->
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-2.8 0.02 -4" scale="0.32 0.32 0.32"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="2.8 0.02 -4" scale="0.28 0.28 0.28"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-2.8 0.02 -8" scale="0.34 0.34 0.34"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="2.8 0.02 -8" scale="0.30 0.30 0.30"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-2.8 0.02 -12" scale="0.32 0.32 0.32"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="2.8 0.02 -12" scale="0.28 0.28 0.28"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-2.8 0.02 -16" scale="0.30 0.30 0.30"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="2.8 0.02 -16" scale="0.26 0.26 0.26"></a-entity>
+    <!-- Soft lotus path plane on the floor -->
+    <a-plane rotation="-90 0 0" width="3.8" height="20" position="0 0.01 -10" color="#ffe9d2" opacity="0.18"></a-plane>
+    <a-plane rotation="-90 0 0" width="3.8" height="20" position="0 0.015 -10" color="#ffffff" opacity="0.05"></a-plane>
 
-    <!-- Temple on the left side in the distance -->
-    <a-entity 
-      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/sthupa_srilanka.glb"
-      position="-12 0 -24" 
-      scale="3.8 3.8 3.8" 
-      rotation="0 -30 0"></a-entity>
+    <!-- Lotus path edges -->
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-1.8 0.02 -3" scale="0.34 0.34 0.34" animation="property: position; dir: alternate; dur: 4000; loop: true; to: -1.8 0.08 -3"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="1.8 0.02 -3" scale="0.28 0.28 0.28" animation="property: position; dir: alternate; dur: 4300; loop: true; to: 1.8 0.07 -3"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-1.8 0.02 -6" scale="0.36 0.36 0.36" animation="property: rotation; to:0 360 0; dur: 20000; easing: linear; loop: true"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="1.8 0.02 -6" scale="0.30 0.30 0.30" animation="property: rotation; to:0 -360 0; dur: 22000; easing: linear; loop: true"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-1.8 0.02 -9" scale="0.34 0.34 0.34"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="1.8 0.02 -9" scale="0.28 0.28 0.28"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-1.8 0.02 -12" scale="0.32 0.32 0.32"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="1.8 0.02 -12" scale="0.26 0.26 0.26"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="-1.8 0.02 -15" scale="0.30 0.30 0.30"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="1.8 0.02 -15" scale="0.28 0.28 0.28"></a-entity>
 
-    <!-- Buddha statues on the left side, smaller scale -->
-    <a-entity 
-      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/budha_statue.glb"
-      position="-5 0 -10" 
-      scale="2.0 2.0 2.0" 
-      rotation="0 170 0"></a-entity>
-    <a-entity 
-      gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/stone_buddha_statue.glb"
-      position="-8 0 -15" 
-      scale="1.8 1.8 1.8" 
-      rotation="0 170 0"></a-entity>
+    <!-- Center row of lotus decorations -->
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="0 0.02 -5" scale="0.22 0.22 0.22" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="0 0.02 -10" scale="0.24 0.24 0.24" rotation="0 -30 0"></a-entity>
+    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="0 0.02 -13" scale="0.22 0.22 0.22" rotation="0 30 0"></a-entity>
 
-    <!-- Vesak lanterns near the path -->
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/vesak_lanterns.glb" position="2 0 -6" scale="0.72 0.72 0.72" rotation="0 15 0"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/vesak_lanterns.glb" position="-2 0 -10" scale="0.72 0.72 0.72" rotation="0 -12 0"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/vesak_lanterns.glb" position="1.8 0 -14" scale="0.68 0.68 0.68" rotation="0 8 0"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/vesak_lanterns.glb" position="-1.8 0 -18" scale="0.68 0.68 0.68" rotation="0 -10 0"></a-entity>
-
-    <!-- Beautiful custom flying lanterns rising into the sky -->
-    <a-entity position="-3 1.0 -6" animation="property: position; to:-3 10 -18; dur:22000; easing: easeOutQuad; loop: true">
-      <a-cone radius-bottom="0.16" radius-top="0.02" height="0.45" color="#ffc078"></a-cone>
-      <a-sphere position="0 0.35 0" radius="0.11" color="#fff3b0" material="emissive:#ffd472; emissiveIntensity:1"></a-sphere>
-      <a-light type="point" color="#fff1a8" intensity="1.2" distance="4" position="0 0.35 0"></a-light>
-    </a-entity>
-    <a-entity position="0.8 1.2 -8" animation="property: position; to:0.8 11 -16; dur:21000; easing: easeOutQuad; loop: true; delay: 700">
-      <a-cylinder radius="0.08" height="0.38" color="#ffd39b"></a-cylinder>
-      <a-sphere position="0 0.32 0" radius="0.095" color="#fff5c2" material="emissive:#ffd18b; emissiveIntensity:1"></a-sphere>
-      <a-light type="point" color="#ffedb3" intensity="1.3" distance="3.5" position="0 0.32 0"></a-light>
-    </a-entity>
-    <a-entity position="3.5 1.4 -10" animation="property: position; to:3.5 12 -20; dur:23000; easing: easeOutQuad; loop: true; delay: 1200">
-      <a-cone radius-bottom="0.14" radius-top="0.01" height="0.38" color="#ffd6a5"></a-cone>
-      <a-sphere position="0 0.33 0" radius="0.095" color="#fff7d6" material="emissive:#ffe6a8; emissiveIntensity:1"></a-sphere>
-      <a-light type="point" color="#fff6b8" intensity="1.1" distance="3.5" position="0 0.33 0"></a-light>
-    </a-entity>
-    <a-entity position="-1.5 1.6 -12" animation="property: position; to:-1.5 13 -19; dur:19000; easing: easeOutQuad; loop: true; delay: 500">
-      <a-cone radius-bottom="0.15" radius-top="0.02" height="0.40" color="#ffe8a1"></a-cone>
-      <a-sphere position="0 0.34 0" radius="0.09" color="#fffbd6" material="emissive:#ffe5a5; emissiveIntensity:1"></a-sphere>
-      <a-light type="point" color="#fff9bf" intensity="1.0" distance="3.5" position="0 0.34 0"></a-light>
-    </a-entity>
-
-    <!-- Small decorative lotus details near camera path -->
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus_flower2.glb" position="-1.5 0.02 -2" scale="0.26 0.26 0.26"></a-entity>
-    <a-entity gltf-model="https://raw.githubusercontent.com/ThinukaVinjaya/vesakmodels/main/lotus1.glb" position="1.5 0.02 -2" scale="0.28 0.28 0.28"></a-entity>
-
-    <!-- Lighting only, no sky so camera background remains visible -->
-    <a-light type="ambient" color="#e8f4ff" intensity="0.65"></a-light>
-    <a-light type="point" color="#ffe7b4" intensity="1.0" position="0 8 -4"></a-light>
+    <!-- Soft lights for lotus pathway -->
+    <a-light type="ambient" color="#fff7e7" intensity="0.55"></a-light>
+    <a-light type="point" color="#ffefd5" intensity="0.9" distance="8" position="0 5 -10"></a-light>
   </a-scene>
 
   <div style="position:absolute; top:10px; left:10px; color:white; background:rgba(0,0,0,0.6); padding:12px; border-radius:10px; font-family:sans-serif;">
-    <h2>🌕 Vesak AR City</h2>
-    <p>Move around • Look up for flying lanterns</p>
+    <h2>🌸 Lotus Path</h2>
+    <p>Only the lotus path is shown for now.</p>
   </div>
 </body>
 </html>
